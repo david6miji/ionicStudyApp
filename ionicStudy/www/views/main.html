@@ -1,8 +1,10 @@
-<ion-view view-title="Main">
-  <ion-content class="padding">
-    <h2>Main</h2>
-    <p>
-		메인 입니다. 
-    </p>
+<ion-view view-title="목록">
+  <ion-content >
+  
+	<div class="list">
+		<a ng-repeat="item in items" class="item" href="{{item.url}}">
+			{{item.title}}
+		</a>
+	</div>
   </ion-content>
 </ion-view>

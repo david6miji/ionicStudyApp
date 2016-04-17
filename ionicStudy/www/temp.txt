@@ -64,4 +64,10 @@
     </ion-pane-->
 
 
+	<ion-list>
+		<ion-item ng-repeat="item in items" ng-click("click)>
+			Hello, {{item.title}}!
+		</ion-item>
+	</ion-list>
+	
 	
