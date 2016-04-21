@@ -22,12 +22,13 @@ angular.module('starter', ['ionic', 'ngCordova','starter.controllers'])
 .config(function($stateProvider, $urlRouterProvider) {
 	
 	$stateProvider
-	.state('main', 			{ url: '/', 				templateUrl: 'views/main.html'    	, 		controller: 'mainCtrl'})
-	.state('device info', 	{ url: '/dev_info',			templateUrl: 'views/dev_info.html'	, 		controller: 'deviceInfoCtrl' })
-	.state('file system', 	{ url: '/filesystem',		templateUrl: 'views/filesystem.html', 		controller: 'filesystemCtrl' })
-	.state('power manager', { url: '/power_manager',	templateUrl: 'views/power_manager.html', 	controller: 'powerManagerCtrl' })
-	.state('sample1', 		{ url: '/sample1', 			templateUrl: 'views/sample1.html' 	, 		controller: 'sample1Ctrl' })
-	.state('sample2', 		{ url: '/sample2', 			templateUrl: 'views/sample1.html' 	, 		controller: 'sample2Ctrl' })
+	.state('main', 			{ url: '/', 				templateUrl: 'views/main.html'    	, 		controller: 'mainCtrl'			})
+	.state('device info', 	{ url: '/dev_info',			templateUrl: 'views/dev_info.html'	, 		controller: 'deviceInfoCtrl' 	})
+	.state('file system', 	{ url: '/filesystem',		templateUrl: 'views/filesystem.html', 		controller: 'filesystemCtrl' 	})
+	.state('file browser', 	{ url: '/filebrowser',		templateUrl: 'views/filebrowser.html', 		controller: 'fileBrowserCtrl' 	})
+	.state('power manager', { url: '/power_manager',	templateUrl: 'views/power_manager.html', 	controller: 'powerManagerCtrl' 	})
+	.state('sample1', 		{ url: '/sample1', 			templateUrl: 'views/sample1.html' 	, 		controller: 'sample1Ctrl' 		})
+	.state('sample2', 		{ url: '/sample2', 			templateUrl: 'views/sample1.html' 	, 		controller: 'sample2Ctrl' 		})
 	;
   
 	$urlRouterProvider.otherwise('/');
