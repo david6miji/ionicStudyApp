@@ -1,0 +1,22 @@
+<ion-view view-title="네이티브 오디오 백그라운드">
+<ion-content class="padding">
+
+	<div class="list card" ng-repeat="audio in audioTracks">
+		<div class="item item-avatar">
+			<img src="/img/audio_wave.png">
+			<h2>{{audio.title}}</h2>
+			<p>{{audio.info}}</p>
+		</div>
+		<div class="item tabs tabs-secondary tabs-icon-left">
+			<a class="tab-item" href="#" ng-click="playTrack(audio.track, audio.key)">
+				<i class="icon ion-ios-play"></i> Play
+			</a>
+			<a class="tab-item" href="#" ng-click="stopTrack(audio.key)">
+				<i class="icon ion-android-checkbox-blank"></i>	Stop
+			</a>
+		</div>
+	</div>
+</ion-content>
+</ion-view>
+
+

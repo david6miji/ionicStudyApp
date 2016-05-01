@@ -9,12 +9,14 @@ angular.module('starter.controllers', [])
 .controller('mainCtrl', function($scope) {
 	
     $scope.items = [
-		{ title : "장치 정보"    		, url : "#/dev_info" 		},
-		{ title : "로컬 파일 시스템"    , url : "#/filesystem" 		},
-		{ title : "파일 브라우저"    	, url : "#/filebrowser" 	},
-		{ title : "전원 관리"  			, url : "#/power_manager" 	},
-		{ title : "리스트 샘플1"  		, url : "#/sample1" 		},
-		{ title : "리스트 샘플2" 		, url : "#/sample2" 		},
+		{ title : "장치 정보"    				, url : "#/dev_info" 					},
+		{ title : "로컬 파일 시스템"    		, url : "#/filesystem" 					},
+		{ title : "파일 브라우저"    			, url : "#/filebrowser" 				},
+		{ title : "전원 관리"  					, url : "#/power_manager" 				},
+		{ title : "네이티브 오디오"  			, url : "#/native_audio" 				},
+		{ title : "네이티브 오디오 백그라운드"  , url : "#/native_audio_background" 	},
+		{ title : "리스트 샘플1"  				, url : "#/sample1" 					},
+		{ title : "리스트 샘플2" 				, url : "#/sample2" 					},
 	];
 	
 })
