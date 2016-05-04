@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic', 'ngCordova','starter.controllers'])
 
-.run(function($ionicPlatform) {
+.run( function($rootScope, $ionicPlatform,$ionicHistory, $ionicPopup) {
 	
   $ionicPlatform.ready(function() {
 	  
@@ -17,6 +17,37 @@ angular.module('starter', ['ionic', 'ngCordova','starter.controllers'])
       StatusBar.styleDefault();
     }
   });
+  
+	$ionicPlatform.registerBackButtonAction(function () {
+		console.log( 'EVENT onHardwareBackButton()' );
+		
+		var state_name = $ionicHistory.currentStateName();
+		console.log( 'state_name =', state_name );
+		if( state_name == 'main' ) {
+			
+			var confirmPopup = $ionicPopup.confirm({
+                        title: '종료 확인',
+                        template: "FA-BLE를 종료 하시겠습니까?",
+						 buttons: [
+									{ text: '취소' },
+									{ text: '확인' ,  
+									  type: 'button-positive',
+									  onTap: function(event) {
+												ionic.Platform.exitApp();
+												event.preventDefault();
+												return false;
+									   }
+									 },
+								]	
+                    });
+					
+		} else {
+			console.log( 'no Main View Exit' );
+			$ionicHistory.goBack();
+		}
+		
+	}, 101); 
+		
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -50,6 +81,10 @@ angular.module('starter', ['ionic', 'ngCordova','starter.controllers'])
 										templateUrl: 'views/native_audio_background.html', 
 										controller: 'nativeAudioBackgroundCtrl' 	})
 							
+	.state('media audio', 				{ url: '/media_audio',		
+										templateUrl: 'views/media_audio.html', 
+										controller: 'mediaAudioCtrl' 	})
+										
 	.state('sample1', 					{ url: '/sample1', 			
 										templateUrl: 'views/sample1.html' 	, 	
 										controller: 'sample1Ctrl' 		})
