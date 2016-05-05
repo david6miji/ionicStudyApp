@@ -8,7 +8,7 @@ angular.module('starter', ['ionic', 'ngCordova','starter.controllers'])
 .run( function($rootScope, $ionicPlatform,$ionicHistory, $ionicPopup) {
 	
   $ionicPlatform.ready(function() {
-	  
+
     if(window.cordova && window.cordova.plugins.Keyboard) {
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
@@ -84,6 +84,10 @@ angular.module('starter', ['ionic', 'ngCordova','starter.controllers'])
 	.state('media audio', 				{ url: '/media_audio',		
 										templateUrl: 'views/media_audio.html', 
 										controller: 'mediaAudioCtrl' 	})
+										
+	.state('interval', 					{ url: '/interval',		
+										templateUrl: 'views/interval.html', 
+										controller: 'intervalCtrl' 	})
 										
 	.state('sample1', 					{ url: '/sample1', 			
 										templateUrl: 'views/sample1.html' 	, 	

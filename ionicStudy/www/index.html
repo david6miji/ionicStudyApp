@@ -23,11 +23,14 @@
     <script src="js/ctrl-native_audio.js"></script>
     <script src="js/ctrl-native_audio_background.js"></script>
     <script src="js/ctrl-media_audio.js"></script>
-	
+    <script src="js/ctrl-interval.js"></script>
 	
   </head>
   <body ng-app="starter">
+  
 	<ion-nav-bar class = "bar-positive" ng-controller="navCtrl">
+	
+	
 		<ion-nav-title>
 			Title
 		</ion-nav-title>
@@ -35,6 +38,12 @@
 		<ion-nav-back-button class = "button-clear" ng-click = "goBack()">
 			<i class = "icon ion-arrow-left-c"></i> Back
 		</ion-nav-back-button>
+		
+		<ion-nav-buttons class="pull-right">
+			<button class="button bar-positive" ng-click="goHome()">
+				<i class = "icon ion-android-home"></i>
+			</button>
+		</ion-nav-buttons>
 		
 	</ion-nav-bar>
   
